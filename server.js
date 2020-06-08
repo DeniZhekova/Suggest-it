@@ -9,7 +9,7 @@ const path =require('path');
 const cookieParser=require("cookie-parser");
 const fs=require('fs');
 // db
-mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true })
+mongoose.connect("mongodb+srv://dezheaaa:test1234@clusterstackoverflow-uuz7k.azure.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true })
 .then(()=> console.log('DB Connected'))
 mongoose.connection.on('error',err => {
     console.log(`DB connection error: ${err.message}`)
@@ -35,12 +35,12 @@ app.use(cookieParser());
 app.use(cors());
 
 // routes
-const postRoutes=require("./routes/suggest")
+const suggestRoutes=require("./routes/suggest")
 const authRoutes=require("./routes/auth")
 const userRoutes=require("./routes/user")
 
 
-app.use("/api",postRoutes);
+app.use("/api",suggestRoutes);
 app.use("/api",authRoutes);
 app.use('/api',userRoutes);
 

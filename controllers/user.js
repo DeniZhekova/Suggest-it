@@ -1,5 +1,5 @@
 const User=require('../model/User');
-const Post=require('../model/Suggest');
+const Suggest=require('../model/Suggest');
 const formidable=require('formidable');
 const fs=require('fs');
 const _= require("lodash");
@@ -105,11 +105,11 @@ exports.deleteUser=(req,res)=>{
             })
         }
         let id=user._id;
-        Post.findByIdAndDelete({postedBy:id}).then(post =>{
+        Suggest.findByIdAndDelete({postedBy:id}).then(suggest =>{
             user.hashed_password=undefined;
             user.salt=undefined;
             res.json({msg:'User and Its suggest  Deleted!'});
-        }).catch(err => res.json({msg:'failed to delete posts of user but user deleted'}))
+        }).catch(err => res.json({msg:'failed to delete suggestions of user but user deleted'}))
     })
 }
 

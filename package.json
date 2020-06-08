@@ -1,5 +1,5 @@
 {
-  "name": "social-media",
+  "name": "suggest-it",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,19 +14,12 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MasterKN48/blog.git"
-  },
   "keywords": [
-    "mern"
+    "mern",
+    "exam",
+    "2020"
   ],
-  "author": "mkn",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MasterKN48/blog/issues"
-  },
-  "homepage": "https://github.com/MasterKN48/blog#readme",
+  "author": "DeniZhekova",
   "dependencies": {
     "concurrently": "^4.1.2",
     "cookie-parser": "^1.4.4",

@@ -37,10 +37,10 @@ const Router = () => (
       <Route path="/suggest/:suggestId" exact component={SingleSuggestion} />
       <PrivateRoute exact path="/admin" component={Admin} />
       <PrivateRoute path="/user/:userId" exact component={Profile} />
-      <PrivateRoute path="/suggest/edit/:suggestId" exact component={EditSuggestion: EditSuggestion} />
+      <PrivateRoute path="/suggest/edit/:suggestId" exact component={EditSuggestion} />
       <PrivateRoute path="/user/edit/:userId" exact component={EditProfile} />
       <PrivateRoute path="/findpeople" exact component={Findpeople} />
-      <PrivateRoute path="/create/suggest" exact component={Suggest: Suggest} />
+      <PrivateRoute path="/create/suggest" exact component={Suggest} />
       <Route path="/login" exact component={Login} />
       <Route path="/users" exact component={User} />
       <Route exact path="/forgot-password" component={ForgotPassword} />

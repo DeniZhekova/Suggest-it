@@ -8,7 +8,7 @@ export const create= async (userId,token,suggest)=>{
 };
 
 export const list= async ()=>{
-    return await axios.get(`/api/suggest`)
+    return await axios.get(`/api/suggestions`)
     .then(res=> {
         console.log(res);
         return res.data;
