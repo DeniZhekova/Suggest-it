@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SuggestionsList from "../suggest/SuggestionsList";
+import Allpost from "../post/Allpost";
 import User from "../user/User";
 import { isAuthenticated } from "../auth";
 import { Redirect } from "react-router-dom";
@@ -30,7 +30,7 @@ class Admin extends Component {
                         <div className="col-md-6">
                             <h2>Suggestions</h2>
                             <hr/>
-                            <SuggestionsList />
+                            <Allpost />
                         </div>
                         <div className="col-md-6">
                             <h2>Users</h2>

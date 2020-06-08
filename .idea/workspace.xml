@@ -2,15 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91592c46-2867-4579-9ea8-20c5f5470a6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/core/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/core/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/core/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/core/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/EditSuggestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/EditPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/Share.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Share.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/SingleSuggestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/Suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/SuggestionsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Allpost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/suggest/apiSuggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/apiPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/user/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/apiDocs.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiDocs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/suggest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,10 +56,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.12.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunManager">
     <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server.js" working-dir="$PROJECT_DIR$">
@@ -51,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591599519438</updated>
       <workItem from="1591599522788" duration="7856000" />
-      <workItem from="1591612551101" duration="4410000" />
+      <workItem from="1591612551101" duration="17841000" />
     </task>
     <servers />
   </component>
@@ -59,6 +93,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="496" y="208" key="#Inspections" timestamp="1591633160799">
+      <screen x="0" y="23" width="1792" height="1040" />
+    </state>
+    <state x="496" y="208" key="#Inspections/1792.23.1288.923/0.23.1792.1040@0.23.1792.1040" timestamp="1591633160799" />
+    <state x="634" y="297" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591639994435">
+      <screen x="0" y="23" width="1792" height="1040" />
+    </state>
+    <state x="634" y="297" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.23.1288.923/0.23.1792.1040@0.23.1792.1040" timestamp="1591639994435" />
     <state x="699" y="466" key="Github.CreateGistDialog" timestamp="1591610604667">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
@@ -79,17 +121,18 @@
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
     <state width="1771" height="284" key="GridCell.Tab.0.right/0.23.1792.1040@0.23.1792.1040" timestamp="1591609738997" />
-    <state x="397" y="182" key="SettingsEditor" timestamp="1591610972475">
+    <state x="397" y="182" key="SettingsEditor" timestamp="1591629089428">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state x="397" y="182" key="SettingsEditor/0.23.1792.1040@0.23.1792.1040" timestamp="1591610972475" />
+    <state x="397" y="182" key="SettingsEditor/0.23.1792.1040@0.23.1792.1040" timestamp="1591629089428" />
     <state x="679" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591610378742">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
     <state x="679" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1040@0.23.1792.1040" timestamp="1591610378742" />
-    <state x="554" y="300" width="683" height="486" key="find.popup" timestamp="1591619668307">
+    <state x="554" y="300" width="1016" height="486" key="find.popup" timestamp="1591641673568">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state x="554" y="300" width="683" height="486" key="find.popup/0.23.1792.1040@0.23.1792.1040" timestamp="1591619668307" />
+    <state x="554" y="300" width="683" height="486" key="find.popup/0.23.1792.1040@0.23.1792.1040" timestamp="1591628856971" />
+    <state x="554" y="300" width="1016" height="486" key="find.popup/1792.23.1288.923/0.23.1792.1040@0.23.1792.1040" timestamp="1591641673568" />
   </component>
 </project>

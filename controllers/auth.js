@@ -45,7 +45,7 @@ exports.signin=(req,res)=>{
         }
 
     // gen token as t in cookie
-        const token=jwt.sign({_id:user._id,role:user.role},process.env.JWT_SECRET);
+        const token=jwt.sign({_id:user._id,role:user.role},process.env.REACT_APP_JWT_SECRET);
 
     // persist the token as 't' in cookie
         res.cookie('t',token,{expire: new Date() + 9999})
@@ -61,7 +61,7 @@ exports.signout=(req,res)=>{
 }
 
 exports.requireSignin=expressJwt({
-    secret: process.env.JWT_SECRET,
+    secret: process.env.REACT_APP_JWT_SECRET,
     // if token is valid express jwt appends the verified users id in auth key to request obj
     userProperty:"auth"
 });
@@ -79,7 +79,7 @@ exports.socialLogin = (req, res) => {
             // generate a token with user id and secret
             const token = jwt.sign(
                 { _id: user._id, iss: "NODEAPI" },
-                process.env.JWT_SECRET
+                process.env.REACT_APP_JWT_SECRET
             );
             res.cookie("t", token, { expire: new Date() + 9999 });
             // return response with user and token to frontend client
@@ -96,7 +96,7 @@ exports.socialLogin = (req, res) => {
             // generate a token with user id and secret
             const token = jwt.sign(
                 { _id: user._id, iss: "NODEAPI" },
-                process.env.JWT_SECRET
+                process.env.REACT_APP_JWT_SECRET
             );
             res.cookie("t", token, { expire: new Date() + 9999 });
             // return response with user and token to frontend client
@@ -125,7 +125,7 @@ exports.forgotPassword = (req, res) => {
         // generate a token with user id and secret
         const token = jwt.sign(
             { _id: user._id, iss: "NODEAPI" },
-            process.env.JWT_SECRET
+            process.env.REACT_APP_JWT_SECRET
         );
 
         // email data

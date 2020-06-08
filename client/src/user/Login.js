@@ -21,6 +21,7 @@ const Login = () => {
     const clickSubmit = event => {
         event.preventDefault();
         const user={email,password};
+        console.log(email,password);
         setValues({ ...values, error: false, loading: true });
         axios
           .post("/api/signin",user)

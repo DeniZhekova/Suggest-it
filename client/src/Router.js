@@ -8,10 +8,10 @@ import Login from './user/Login';
 import User from './user/User';
 import EditProfile from './user/EditProfile';
 import Findpeople from './user/Findpeople';
-import Suggest from './suggest/Suggest';
+import Post from './post/Post';
 import PrivateRoute from  './auth/PrivateRoute';
-import SingleSuggestion from './suggest/SingleSuggestion';
-import EditSuggestion from './suggest/EditSuggestion';
+import SinglePost from './post/SinglePost';
+import EditPost from './post/EditPost';
 import ForgotPassword from "./user/ForgetPassword";
 import ResetPassword from "./user/ResetPassword";
 import Admin from './admin/Admin'
@@ -27,26 +27,25 @@ const NoMatchPage = () => {
   );
 };
 const Router = () => (
-  
-  // eslint-disable-next-line no-unused-expressions
+
   <div>
     <Navbar/>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/signup" exact component={Signup} />
-      <Route path="/suggest/:suggestId" exact component={SingleSuggestion} />
-      <PrivateRoute exact path="/admin" component={Admin} />
-      <PrivateRoute path="/user/:userId" exact component={Profile} />
-      <PrivateRoute path="/suggest/edit/:suggestId" exact component={EditSuggestion} />
-      <PrivateRoute path="/user/edit/:userId" exact component={EditProfile} />
-      <PrivateRoute path="/findpeople" exact component={Findpeople} />
-      <PrivateRoute path="/create/suggest" exact component={Suggest} />
-      <Route path="/login" exact component={Login} />
-      <Route path="/users" exact component={User} />
-      <Route exact path="/forgot-password" component={ForgotPassword} />
-      <Route exact path="/reset-password/:resetPasswordToken" component={ResetPassword} />
-      <Route component={NoMatchPage} />
-    </Switch>
+      <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/signup" exact component={Signup} />
+          <Route path="/post/:postId" exact component={SinglePost} />
+          <PrivateRoute exact path="/admin" component={Admin} />
+          <PrivateRoute path="/user/:userId" exact component={Profile} />
+          <PrivateRoute path="/post/edit/:postId" exact component={EditPost} />
+          <PrivateRoute path="/user/edit/:userId" exact component={EditProfile} />
+          <PrivateRoute path="/findpeople" exact component={Findpeople} />
+          <PrivateRoute path="/create/post" exact component={Post} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/users" exact component={User} />
+          <Route exact path="/forgot-password" component={ForgotPassword} />
+          <Route exact path="/reset-password/:resetPasswordToken" component={ResetPassword} />
+          <Route component={NoMatchPage} />
+      </Switch>
     <StickyFooter className='jumbrotron'
     bottomThreshold={50}
     normalStyles={{

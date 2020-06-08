@@ -34,7 +34,7 @@ const Navbar = ({history}) => {
                         {isAuthenticated() && (
                             <li className='nav-item'>
                                 <span className="navbar-text ml-auto white-text">
-                                   <NavLink className="nav-link" activeClassName="line" to={'/create/suggest'}>Create Suggestion</NavLink>
+                                   <NavLink className="nav-link" activeClassName="line" to={'/create/post'}>Create Suggestion</NavLink>
                                 </span>
                             </li>
                         )}

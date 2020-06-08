@@ -1,5 +1,5 @@
 import React from 'react'
-import SuggestionsList from '../suggest/SuggestionsList';
+import Allpost from '../post/Allpost';
 function Home() {
     return (
         <div className='mb-5'>
@@ -8,7 +8,7 @@ function Home() {
                 <p className='lead'>Welcome To Suggest-It. You can post, edit, delete,like and sign suggestions </p>
             </div>
             <div className='container-fluid'>
-                    <SuggestionsList />
+                    <Allpost />
             </div>
         </div>
     )

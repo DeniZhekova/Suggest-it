@@ -1,21 +1,21 @@
 const User=require('../model/User');
-const Suggest=require('../model/Suggest');
+const Post=require('../model/Post');
 const formidable=require('formidable');
 const fs=require('fs');
 const _= require("lodash");
 exports.userById=(req,res,next,id)=>{
     User.findById(id)
-    .populate('following','_id name')
-    .populate('followers','_id name')
-    .exec((err,user)=>{
-        if (err || !user) {
-            return res.status(400).json({
-                error:'User not found'
-            })
-        };
-        req.profile=user // adds profile in object in req
-        next();
-    })
+        .populate('following','_id name')
+        .populate('followers','_id name')
+        .exec((err,user)=>{
+            if (err || !user) {
+                return res.status(400).json({
+                    error:'User not found'
+                })
+            };
+            req.profile=user // adds profile in object in req
+            next();
+        })
 }
 exports.userName=(req,res)=>{
     let data=req.profile.name;
@@ -37,7 +37,7 @@ exports.hasAuthorization=(req,res,next)=>{
 exports.allUsers=(req,res)=>{
     User.find((err,users)=>{
         if(err) return res.status(400).json({error:err})
-        
+
         return res.json({users});
     }).select("_id name email updated created");
 }
@@ -105,11 +105,11 @@ exports.deleteUser=(req,res)=>{
             })
         }
         let id=user._id;
-        Suggest.findByIdAndDelete({postedBy:id}).then(suggest =>{
+        Post.findByIdAndDelete({postedBy:id}).then(post =>{
             user.hashed_password=undefined;
             user.salt=undefined;
-            res.json({msg:'User and Its suggest  Deleted!'});
-        }).catch(err => res.json({msg:'failed to delete suggestions of user but user deleted'}))
+            res.json({msg:'User and Its post  Deleted!'});
+        }).catch(err => res.json({msg:'failed to delete posts of user but user deleted'}))
     })
 }
 
@@ -130,40 +130,40 @@ exports.removeFollowing=(req,res,next)=>{
 
 exports.addFollower=(req,res,next)=>{
     User.findByIdAndUpdate(req.body.followId,{$push:{followers:req.body.userId}},{new:true})
-    .populate('following','_id name')
-    .populate('followers','_id name')
-    .exec((err,result)=>{
-        if(err) return res.status(400).json({
-            error:err
+        .populate('following','_id name')
+        .populate('followers','_id name')
+        .exec((err,result)=>{
+            if(err) return res.status(400).json({
+                error:err
+            })
+            result.hashed_password=undefined;
+            result.salt=undefined
+            res.json(result);
         })
-        result.hashed_password=undefined;
-        result.salt=undefined
-        res.json(result);
-    })
 }
 
 exports.removeFollower=(req,res,next)=>{
     User.findByIdAndUpdate(req.body.unfollowId,{$pull:{followers:req.body.userId}},{new:true})
-    .populate('following','_id name')
-    .populate('followers','_id name')
-    .exec((err,result)=>{
-        if(err) return res.status(400).json({
-            error:err
+        .populate('following','_id name')
+        .populate('followers','_id name')
+        .exec((err,result)=>{
+            if(err) return res.status(400).json({
+                error:err
+            })
+            result.hashed_password=undefined;
+            result.salt=undefined
+            res.json(result);
         })
-        result.hashed_password=undefined;
-        result.salt=undefined
-        res.json(result);
-    })
 };
 
 
-exports.findpeople=(req,res)=>{
-    let following=req.profile.following
+exports.findpeople=(req,res)=> {
+    let following = req.profile.following
     following.push(req.profile._id)// current user
-    User.find({_id:{$nin:following}},(err,users)=>{
-        if(err){
+    User.find({_id: {$nin: following}}, (err, users) => {
+        if (err) {
             return res.status(400).json({
-                error:err
+                error: err
             })
         }
         res.json(users)

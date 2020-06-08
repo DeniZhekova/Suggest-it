@@ -8,23 +8,24 @@ dotenv.config()
 const path =require('path');
 const cookieParser=require("cookie-parser");
 const fs=require('fs');
+
 // db
-mongoose.connect("mongodb+srv://dezheaaa:test1234@clusterstackoverflow-uuz7k.azure.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true })
+mongoose.connect("mongodb+srv://admin:admin@suggest-it-n73bw.azure.mongodb.net/suggest-it?retryWrites=true&w=majority",{ useNewUrlParser: true })
 .then(()=> console.log('DB Connected'))
 mongoose.connection.on('error',err => {
     console.log(`DB connection error: ${err.message}`)
 });
 
 app.get("/docs", (req, res) => {
-  fs.readFile('docs/apiDocs.json',(err,data)=>{
-    if(err){
-        res.status(400).json({
-            error:err
-        })
-    }
-    const docs=JSON.parse(data);
-    res.json(docs)
-  })
+    fs.readFile('docs/apiDocs.json',(err,data)=>{
+        if(err){
+            res.status(400).json({
+                error:err
+            })
+        }
+        const docs=JSON.parse(data);
+        res.json(docs)
+    })
 });
 
 // middleware
@@ -35,12 +36,12 @@ app.use(cookieParser());
 app.use(cors());
 
 // routes
-const suggestRoutes=require("./routes/suggest")
+const postRoutes=require("./routes/post")
 const authRoutes=require("./routes/auth")
 const userRoutes=require("./routes/user")
 
 
-app.use("/api",suggestRoutes);
+app.use("/api",postRoutes);
 app.use("/api",authRoutes);
 app.use('/api',userRoutes);
 
@@ -53,13 +54,13 @@ app.use((err,req,res,next)=>{
 })
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production'){
-  // set static folder
-  app.use(express.static('client/build'));
-  app.get('*', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
+    // set static folder
+    app.use(express.static('client/build'));
+    app.get('*', (req,res)=>{
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
 }
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => `Server running on port ${port} `);
+app.listen(port, () => `Server running on port ${port} 🔥`);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { comment, uncomment } from "./apiSuggest";
+import { comment, uncomment } from "./apiPost";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import Default from "../user/Default.png";
@@ -37,15 +37,15 @@ class Comment extends Component {
         if (this.isValid()) {
             const userId = isAuthenticated().user._id;
             const token = isAuthenticated().token;
-            const suggestId = this.props.suggestId;
+            const postId = this.props.postId;
 
-            comment(userId, token, suggestId, { text: this.state.text }).then(
+            comment(userId, token, postId, { text: this.state.text }).then(
                 data => {
                     if (data.error) {
                         console.log(data.error);
                     } else {
                         this.setState({ text: "" });
-                        // dispatch fresh list of coments to parent (SingleSuggestion.js)
+                        // dispatch fresh list of coments to parent (SinglePost)
                         this.props.updateComments(data.comments);
                     }
                 }
@@ -56,9 +56,9 @@ class Comment extends Component {
     deleteComment = comment => {
         const userId = isAuthenticated().user._id;
         const token = isAuthenticated().token;
-        const suggestId = this.props.suggestId;
+        const postId = this.props.postId;
 
-        uncomment(userId, token, suggestId, comment).then(data => {
+        uncomment(userId, token, postId, comment).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -93,7 +93,7 @@ class Comment extends Component {
                             placeholder="Leave a comment..."
                         />
                         <button className="btn btn-raised btn-success mt-2">
-                            Suggest
+                            Post
                         </button>
                     </div>
                 </form>
@@ -142,9 +142,9 @@ class Comment extends Component {
                                         ).toDateString()}
                                         <span>
                                             {isAuthenticated().user &&
-                                                isAuthenticated().user._id ===
-                                                    comment.postedBy && (
-                                                    <>
+                                            isAuthenticated().user._id ===
+                                            comment.postedBy && (
+                                                <>
                                                         <span
                                                             onClick={() =>
                                                                 this.deleteConfirmed(
@@ -155,8 +155,8 @@ class Comment extends Component {
                                                         >
                                                             Remove
                                                         </span>
-                                                    </>
-                                                )}
+                                                </>
+                                            )}
                                         </span>
                                     </p>
                                 </div>

@@ -11,8 +11,10 @@ const Signup = () => {
     });
     const { name, email, password,error,success } = values;
 
-    const handleChange = name => event => {
-        setValues({ ...values, error: false, [name]: event.target.value });
+    const handleChange = name => {
+        return event => {
+            setValues({...values, error: false, [name]: event.target.value});
+        };
     };
     const clickSubmit=(event)=>{
         event.preventDefault();
@@ -20,7 +22,6 @@ const Signup = () => {
         const user={
             name,email,password
         };
-        //console.log(user);
         axios
           .post("/api/signup",user)
           .then(res => {
@@ -36,7 +37,6 @@ const Signup = () => {
                   error:err.response.data.error,
                   success:false
               });
-              console.log(err.response.data)
           });
 
     };
