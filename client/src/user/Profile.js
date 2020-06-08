@@ -15,7 +15,7 @@ class Profile extends Component {
       redirectToSignin: false,
       following: false,
       error: "",
-      posts: []
+      suggestions: []
     };
   }
   // check follow
@@ -45,7 +45,7 @@ class Profile extends Component {
         this.setState({ redirectToSignin: true });
       } else {
         listByUser(userId,token).then(res =>{
-          this.setState({posts:res})
+          this.setState({suggestions:res})
         })
         let following = this.checkFollow(data.data);
         this.setState({ user: data.data, following });
@@ -63,7 +63,7 @@ class Profile extends Component {
   }
 
   render() {
-    const { redirectToSignin, posts,user } = this.state;
+    const { redirectToSignin, suggestions,user } = this.state;
     if (redirectToSignin) return <Redirect to="/login" />;
 
     const photoUrl = user._id
@@ -126,7 +126,7 @@ class Profile extends Component {
             <p className="lead">{user.about}</p>
             <hr />
             <ProfileTabs
-              posts={posts}
+                suggestions={suggestions}
               followers={this.state.user.followers}
               following={this.state.user.following}
             />

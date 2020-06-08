@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="91592c46-2867-4579-9ea8-20c5f5470a6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/apiDocs.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiDocs.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591599519438</updated>
       <workItem from="1591599522788" duration="7856000" />
-      <workItem from="1591612551101" duration="3251000" />
+      <workItem from="1591612551101" duration="4410000" />
     </task>
     <servers />
   </component>
@@ -84,9 +87,9 @@
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
     <state x="679" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1040@0.23.1792.1040" timestamp="1591610378742" />
-    <state x="554" y="300" width="683" height="486" key="find.popup" timestamp="1591617652420">
+    <state x="554" y="300" width="683" height="486" key="find.popup" timestamp="1591619668307">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state x="554" y="300" width="683" height="486" key="find.popup/0.23.1792.1040@0.23.1792.1040" timestamp="1591617652420" />
+    <state x="554" y="300" width="683" height="486" key="find.popup/0.23.1792.1040@0.23.1792.1040" timestamp="1591619668307" />
   </component>
 </project>
