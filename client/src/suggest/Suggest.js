@@ -91,7 +91,7 @@ class Suggest extends Component {
                             </div>
                         <div className="form">
                                 <div className="md-form">
-                                    <input autoCapitalize='true' autoComplete='post' type="text" required="required" onChange={this.handleChange("title")} id="materialRegisterFormLastName" className="form-control"/>
+                                    <input autoCapitalize='true' autoComplete='git' type="text" required="required" onChange={this.handleChange("title")} id="materialRegisterFormLastName" className="form-control"/>
                                     <label htmlFor="materialRegisterFormLastName">Title </label>
                                 </div>
                         </div>
