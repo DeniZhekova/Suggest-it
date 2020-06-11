@@ -7,7 +7,6 @@ import Profile from './user/Profile';
 import Login from './user/Login';
 import User from './user/User';
 import EditProfile from './user/EditProfile';
-import Findpeople from './user/Findpeople';
 import Post from './post/Post';
 import PrivateRoute from  './auth/PrivateRoute';
 import SinglePost from './post/SinglePost';
@@ -38,7 +37,6 @@ const Router = () => (
           <PrivateRoute path="/user/:userId" exact component={Profile} />
           <PrivateRoute path="/post/edit/:postId" exact component={EditPost} />
           <PrivateRoute path="/user/edit/:userId" exact component={EditProfile} />
-          <PrivateRoute path="/findpeople" exact component={Findpeople} />
           <PrivateRoute path="/create/post" exact component={Post} />
           <Route path="/login" exact component={Login} />
           <Route path="/users" exact component={User} />

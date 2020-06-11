@@ -16,10 +16,10 @@ class Comment extends Component {
 
     isValid = () => {
         const { text } = this.state;
-        if (!text.length > 0 || text.length > 150) {
+        if (!text.length > 0 || text.length > 200) {
             this.setState({
                 error:
-                    "Comment should not be empty and less than 150 characters long"
+                    "Suggestion should not be empty and less than 100 characters long"
             });
             return false;
         }
@@ -30,7 +30,7 @@ class Comment extends Component {
         e.preventDefault();
 
         if (!isAuthenticated()) {
-            this.setState({ error: "Please signin to leave a comment" });
+            this.setState({ error: "Please signin to leave a suggestion" });
             return false;
         }
 
@@ -45,7 +45,7 @@ class Comment extends Component {
                         console.log(data.error);
                     } else {
                         this.setState({ text: "" });
-                        // dispatch fresh list of coments to parent (SinglePost)
+                        // dispatch fresh list of suggestions to parent (SinglePost)
                         this.props.updateComments(data.comments);
                     }
                 }
@@ -69,7 +69,7 @@ class Comment extends Component {
 
     deleteConfirmed = comment => {
         let answer = window.confirm(
-            "Are you sure you want to delete your comment?"
+            "Are you sure you want to delete your suggestion?"
         );
         if (answer) {
             this.deleteComment(comment);
@@ -81,7 +81,7 @@ class Comment extends Component {
         const { error } = this.state;
         return (
             <div>
-                <h2 className="mt-5 mb-5">Leave a comment</h2>
+                <h2 className="mt-5 mb-5">Leave a suggestion...</h2>
 
                 <form onSubmit={this.addComment}>
                     <div className="form-group">
@@ -106,7 +106,7 @@ class Comment extends Component {
                 </div>
 
                 <div className="col-md-12">
-                    <h3 className="text-primary">{comments.length} Comments</h3>
+                    <h3 className="text-primary">{comments.length} Suggestions</h3>
                     <hr />
                     {comments.map((comment, i) => (
                         <div key={i}>

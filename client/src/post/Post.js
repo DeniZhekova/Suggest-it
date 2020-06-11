@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import {isAuthenticated} from '../auth';// eslint-disable-next-line
 import {Redirect} from 'react-router-dom';
 import {create} from './apiPost';
-import CKEditor from '@ckeditor/ckeditor5-react';
-import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
 
 class Post extends Component {
     constructor(){
@@ -79,7 +77,7 @@ class Post extends Component {
             <div className='container' style={{marginTop:'1vh',padding:'5vw'}} >
                 <div className="card cloudy-knoxville-gradient">
                     <h5 className="card-header info-color white-text text-center py-4">
-                        <strong>Create Post</strong>
+                        <strong>Create Suggestion</strong>
                     </h5>
                     <div className="card-body px-lg-5 pt-0">
                         {loading ? 'Loading...': null}
@@ -95,29 +93,13 @@ class Post extends Component {
                                     <label htmlFor="materialRegisterFormLastName">Title </label>
                                 </div>
                             </div>
-                            <div className="md-form">
-                                <CKEditor
-                                    style={{height:'100px'}}
-                                    onInit={ editor => {
-                                        console.log( 'Editor is ready to use!', editor );
-
-                                        // Insert the toolbar before the editable area.
-                                        editor.ui.getEditableElement().parentElement.insertBefore(
-                                            editor.ui.view.toolbar.element,
-                                            editor.ui.getEditableElement()
-                                        );
-                                    } }
-                                    onChange={ ( event, editor) => {
-                                        const data = editor.getData();
-                                        this.postData.set('body', data);
-                                        this.setState({body:data})
-                                        console.log(data);
-                                    } }
-                                    editor={ DecoupledEditor }
-                                    data="<p>Create Your Content</p><br/><br/><br/><br/><br/><br/>"
-
-                                />
+                            <div className="form">
+                                <div className="md-form">
+                                    <input autoCapitalize='true' autoComplete='post' type="text" required="required" onChange={this.handleChange("body")} id="materialDescriptionForm" className="form-control"/>
+                                    <label htmlFor="materialRegisterFormLastName">Description </label>
+                                </div>
                             </div>
+
                             <button onClick={this.clickSubmit} className="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Create</button>
                         </form>
                     </div>

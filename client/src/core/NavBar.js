@@ -59,13 +59,6 @@ const Navbar = ({history}) => {
                         </li>
                     )}
 
-                        {isAuthenticated() && (
-                            <li className='nav-item'>
-                                <span className="navbar-text ml-auto white-text">
-                                   <NavLink className="nav-link" activeClassName="line" to={'/findpeople'}>Find People</NavLink>
-                                </span>
-                            </li>
-                        )}
                         {isAuthenticated() ? (
                             <li className="nav-item ml-2">
                                 <span

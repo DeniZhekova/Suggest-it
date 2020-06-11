@@ -64,21 +64,4 @@ export const isAuthenticated = () => {
     return false;
 
 };
-export const socialLogin = async user => {
-    try {
-        const response = await fetch(`/api/social-login`, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            // credentials: "include", // works only in the same origin
-            body: JSON.stringify(user)
-        });
-        console.log("signin response: ", response);
-        return response.json();
-    }
-    catch (err) {
-        return console.log(err);
-    }
-};
+

@@ -88,7 +88,7 @@ class Profile extends Component {
 
             <div className="col-md-8">
               <div className="lead mt-2">
-                <p>Hello {user.name}</p>
+                <p>Full name :  {user.name}</p>
                 <p>Email: {user.email}</p>
                 <p>{`Joined ${new Date(user.created).toDateString()}`}</p>
               </div>
@@ -100,7 +100,7 @@ class Profile extends Component {
                         className="btn btn-raised btn-info mr-5"
                         to={`/create/post`}
                     >
-                      Create Post
+                      Create Suggestion
                     </Link>
 
                     <Link

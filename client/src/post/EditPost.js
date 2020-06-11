@@ -3,8 +3,7 @@ import { singlePost, update } from "./apiPost";
 import { isAuthenticated } from "../auth";
 import { Redirect } from "react-router-dom";
 import Logo from "../core/Logo.png";
-import CKEditor from '@ckeditor/ckeditor5-react';
-import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
+
 
 class EditPost extends Component {
   constructor() {
@@ -111,30 +110,17 @@ class EditPost extends Component {
               value={title}
           />
         </div>
-        <div className="md-form">
-          <CKEditor
-              style={{ height: "100px" }}
-              onInit={editor => {
-                console.log("Editor is ready to use!", editor);
-                // Insert the toolbar before the editable area.
-                editor.ui
-                    .getEditableElement()
-                    .parentElement.insertBefore(
-                    editor.ui.view.toolbar.element,
-                    editor.ui.getEditableElement()
-                );
-              }}
-              onChange={(event, editor) => {
-                const data = editor.getData();
-                this.postData.set("body", data);
-                this.setState({ body: data });
-              }}
-              editor={DecoupledEditor}
-              data={body}
+        <div className="form-group">
+          <label className="text-muted">Description</label>
+          <input
+              onChange={this.handleChange("body")}
+              type="text"
+              className="form-control"
+              value={body}
           />
         </div>
         <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">
-          Update Post
+          Update Suggestion
         </button>
       </form>
   );

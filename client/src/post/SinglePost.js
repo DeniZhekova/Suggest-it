@@ -3,7 +3,6 @@ import {singlePost,remove,like, unlike } from './apiPost';
 import {Link,Redirect} from 'react-router-dom';
 import { isAuthenticated } from '../auth';
 import Comment from './Comment';
-import Share from './Share';
 import Logo from '../core/Logo.png';
 class SinglePost extends Component {
     state={
@@ -75,7 +74,7 @@ class SinglePost extends Component {
         return (
             <div className="card-body mb-5">
                 <Link to={`/`} className="btn btn-raised btn-link btn-md">
-                    Back to posts
+                    Back to suggestions
                 </Link>
                 <h2>{post.title}</h2>
                 <img
@@ -96,7 +95,7 @@ class SinglePost extends Component {
                             className="thumbs up outline icon text-success"
                             style={{ padding: '10px', borderRadius: '50%' }}
                         />{' '}
-                        {likes} Like
+                        {likes} Signatures
                     </h3>
                 ) : (
                     <h3 onClick={this.likeToggle}>
@@ -104,10 +103,10 @@ class SinglePost extends Component {
                             className="thumbs up outline icon text-warning"
                             style={{ padding: '10px', borderRadius: '50%' }}
                         />{' '}
-                        {likes} Like
+                        {likes} Signature
                     </h3>
                 )}
-                <Share title={post.title}/>
+
                 <hr />
                 <div className='container' dangerouslySetInnerHTML={{ __html: post.body}}></div>
                 <br />
@@ -118,10 +117,10 @@ class SinglePost extends Component {
                 {isAuthenticated().user && isAuthenticated().user._id === post.postedBy._id && (
                     <div>
                         <Link to={`/post/edit/${post._id}`} className="btn btn-raised btn-info btn-md">
-                            Update Post
+                            Update Suggestion
                         </Link>
                         <button onClick={this.deleteConfirmed} className="btn btn-raised btn-md btn-danger">
-                            Delete Post
+                            Delete Suggestion
                         </button>
                     </div>
                 )}
@@ -138,13 +137,13 @@ class SinglePost extends Component {
                                     to={`/post/edit/${post._id}`}
                                     className="btn btn-raised btn-warning btn-sm mr-5"
                                 >
-                                    Update Post
+                                    Update Suggestion
                                 </Link>
                                 <button
                                     onClick={this.deleteConfirmed}
                                     className="btn btn-raised btn-danger"
                                 >
-                                    Delete Post
+                                    Delete Suggestion
                                 </button>
                             </div>
                         </div>

@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {Link,Redirect} from 'react-router-dom';
 import axios from "axios";
 import {authenticate} from '../auth';
-import SocialLogin from "./SocialLogin";
 
 const Login = () => {
     const [values, setValues] = useState({
@@ -109,8 +108,6 @@ const Login = () => {
                 <Link to='/signup'>Signup</Link>
                 </p>
             </form>
-            <p>or sign in with:</p>
-                <SocialLogin />
             </div>
         </div>
         </div>

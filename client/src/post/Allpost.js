@@ -96,7 +96,7 @@ class Allpost extends Component {
         return (
             <div className="container">
                 <h2 className="mt-5 mb-5">
-                    {!posts.length ? "No more posts!" : "Recent Posts"}
+                    {!posts.length ? "No more suggestions!" : "Recent Suggestions"}
                 </h2>
 
                 {this.renderPosts(posts)}

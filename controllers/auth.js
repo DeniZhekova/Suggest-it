@@ -65,46 +65,7 @@ exports.requireSignin=expressJwt({
     // if token is valid express jwt appends the verified users id in auth key to request obj
     userProperty:"auth"
 });
-exports.socialLogin = (req, res) => {
-    // try signup by finding user with req.email
-    User.findOne({ email: req.body.email }, (err, user) => {
-        console.log(req.body);
-        if (err || !user) {
-            // create a new user and login
-            user = new User(req.body);
-            req.profile.photo.url=req.body.photo;
-            req.body.photo=undefined;
-            req.profile = user;
-            user.save();
-            // generate a token with user id and secret
-            const token = jwt.sign(
-                { _id: user._id, iss: "NODEAPI" },
-                process.env.REACT_APP_JWT_SECRET
-            );
-            res.cookie("t", token, { expire: new Date() + 9999 });
-            // return response with user and token to frontend client
-            const { _id, name, email } = user;
-            return res.json({ token, user: { _id, name, email } });
-        } else {
-            // update existing user with new social info and login
-            user.photo.url=req.body.photo;
-            req.body.photo=undefined;
-            req.profile = user;
-            user = _.extend(user, req.body);
-            user.updated = Date.now();
-            user.save();
-            // generate a token with user id and secret
-            const token = jwt.sign(
-                { _id: user._id, iss: "NODEAPI" },
-                process.env.REACT_APP_JWT_SECRET
-            );
-            res.cookie("t", token, { expire: new Date() + 9999 });
-            // return response with user and token to frontend client
-            const { _id, name, email } = user;
-            return res.json({ token, user: { _id, name, email } });
-        }
-    });
-};
+
 // add forgotPassword and resetPassword methods
 exports.forgotPassword = (req, res) => {
     if (!req.body) return res.status(400).json({ message: "No request body" });

@@ -2,34 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91592c46-2867-4579-9ea8-20c5f5470a6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/auth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/core/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/core/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/core/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/core/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/EditSuggestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/EditPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/Share.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Share.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/SingleSuggestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/SinglePost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/Suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/SuggestionsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Allpost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/suggest/apiSuggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/apiPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/post/Allpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Allpost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/post/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/post/EditPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/EditPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/post/Share.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/post/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/Findpeople.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/user/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/user/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/user/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/SocialLogin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/user/apiUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/apiUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/suggest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,9 +91,10 @@
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
     <state x="496" y="208" key="#Inspections/1792.23.1288.923/0.23.1792.1040@0.23.1792.1040" timestamp="1591633160799" />
-    <state x="634" y="297" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591639994435">
+    <state x="634" y="297" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591895614647">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
+    <state x="634" y="297" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1040@0.23.1792.1040" timestamp="1591895614647" />
     <state x="634" y="297" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.23.1288.923/0.23.1792.1040@0.23.1792.1040" timestamp="1591639994435" />
     <state x="699" y="466" key="Github.CreateGistDialog" timestamp="1591610604667">
       <screen x="0" y="23" width="1792" height="1040" />
@@ -129,10 +124,10 @@
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
     <state x="679" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1040@0.23.1792.1040" timestamp="1591610378742" />
-    <state x="554" y="300" width="1016" height="486" key="find.popup" timestamp="1591641673568">
+    <state x="554" y="300" width="683" height="486" key="find.popup" timestamp="1591897645150">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state x="554" y="300" width="683" height="486" key="find.popup/0.23.1792.1040@0.23.1792.1040" timestamp="1591628856971" />
+    <state x="554" y="300" width="683" height="486" key="find.popup/0.23.1792.1040@0.23.1792.1040" timestamp="1591897645150" />
     <state x="554" y="300" width="1016" height="486" key="find.popup/1792.23.1288.923/0.23.1792.1040@0.23.1792.1040" timestamp="1591641673568" />
   </component>
 </project>

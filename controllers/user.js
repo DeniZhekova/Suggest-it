@@ -13,7 +13,7 @@ exports.userById=(req,res,next,id)=>{
                     error:'User not found'
                 })
             };
-            req.profile=user // adds profile in object in req
+            req.profile=user
             next();
         })
 }

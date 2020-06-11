@@ -61,9 +61,3 @@ export const unfollow = async (userId, token, unfollowId) => {
         })
         .catch(err => console.log(err));
 };
-
-export const findpeople=async (id,token)=>{
-    return await axios.get(`/api/user/findpeople/${id}`,{ headers: {"Authorization" : `Bearer ${token}`}})
-    .then(res => res.data)
-    .catch(err => console.log(err))
-}

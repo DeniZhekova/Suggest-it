@@ -1,16 +1,16 @@
-const {signup,signin,signout,socialLogin,forgotPassword,
+const {signup,signin,signout,forgotPassword,
     resetPassword}=require('../controllers/auth');
 const express = require("express");
 const router = express.Router();
 const {signupValidator,passwordResetValidator}=require('../helpers');
 const {userById}=require('../controllers/user');
 
+//Routes for signing up/in/out
 router.post('/signup',signup);
 router.post('/signin',signin);
 router.get('/signout',signout);
-router.post("/social-login", socialLogin); 
 
-// password forgot and reset routes
+// Routes for forgotten password and resetting password
 router.put("/forgot-password", forgotPassword);
 router.put("/reset-password", passwordResetValidator, resetPassword);
 
