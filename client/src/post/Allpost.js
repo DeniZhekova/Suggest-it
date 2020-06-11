@@ -15,8 +15,8 @@ class Allpost extends Component {
         this.setState({loading:true})
         this.loadPosts(this.state.page);
         list().then(data =>{
-            //console.log(data)
-            this.setState({posts:data.post,loading:false})
+            const posts = data.post.sort((a, b) => (a.created < b.created) ? 1 : ((b.created < a.created) ? -1 : 0));
+            this.setState({posts:posts,loading:false})
         }).catch(err => console.log(err.response))
     }
     loadMore = number => {
@@ -34,11 +34,11 @@ class Allpost extends Component {
             if (data.error) {
                 console.log(data.error);
             } else {
-                console.log(data.post);
-                this.setState({ posts: data.post });
+                this.setState({ posts: data.posts });
             }
         });
     };
+
 
     renderPosts = posts => {
         return (
