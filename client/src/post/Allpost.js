@@ -15,7 +15,7 @@ class Allpost extends Component {
         this.setState({loading:true})
         this.loadPosts(this.state.page);
         list().then(data =>{
-            const posts = data.post.sort((a, b) => (a.created < b.created) ? 1 : ((b.created < a.created) ? -1 : 0));
+            const posts = data.post.sort((a, b) => (a.likes.length < b.likes.length) ? 1 : ((b.likes.length < a.likes.length) ? -1 : 0));
             this.setState({posts:posts,loading:false})
         }).catch(err => console.log(err.response))
     }
@@ -34,7 +34,8 @@ class Allpost extends Component {
             if (data.error) {
                 console.log(data.error);
             } else {
-                this.setState({ posts: data.posts });
+                const posts = data.post.sort((a, b) => (a.likes.length < b.likes.length) ? 1 : ((b.likes.length < a.likes.length) ? -1 : 0));
+                this.setState({ posts: posts });
             }
         });
     };
@@ -96,7 +97,7 @@ class Allpost extends Component {
         return (
             <div className="container">
                 <h2 className="mt-5 mb-5">
-                    {!posts.length ? "No more suggestions!" : "Recent Suggestions"}
+                    {!posts.length ? "No more suggestions!" : "Most signed suggestions"}
                 </h2>
 
                 {this.renderPosts(posts)}
