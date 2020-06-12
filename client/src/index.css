@@ -14,6 +14,10 @@ code {
 .line{
   box-shadow: inset 0 0px 0 white, inset 0 -1px 0 white
 }
+
+.card{
+  margin:3px
+}
 #main{
   display: table;
   width: 100%;
