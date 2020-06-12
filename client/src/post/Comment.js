@@ -90,7 +90,7 @@ class Comment extends Component {
                             onChange={this.handleChange}
                             value={this.state.text}
                             className="form-control"
-                            placeholder="Leave a comment..."
+                            placeholder="Leave a suggestion..."
                         />
                         <button className="btn btn-raised btn-success mt-2">
                             Post

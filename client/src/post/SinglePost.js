@@ -62,7 +62,7 @@ class SinglePost extends Component {
     };
 
     deleteConfirmed = () => {
-        let answer = window.confirm('Are you sure you want to delete your post?');
+        let answer = window.confirm('Are you sure you want to delete your suggestion?');
         if (answer) {
             this.deletePost();
         }
@@ -144,6 +144,9 @@ class SinglePost extends Component {
                                     className="btn btn-raised btn-danger"
                                 >
                                     Delete Suggestion
+                                </button>
+                                <button onClick={this.hidePost} className="btn btn-raised btn-primary">
+                                    Hide Suggestion
                                 </button>
                             </div>
                         </div>
