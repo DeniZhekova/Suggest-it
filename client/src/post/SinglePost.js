@@ -19,7 +19,7 @@ class SinglePost extends Component {
         if (post.show === true) {
             post.show = false;
         } else {
-            ;
+           post.show = true ;
         }
     };
 

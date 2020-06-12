@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/post/Allpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/Allpost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/post/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/post/SinglePost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/ProfileTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/user/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/user/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -121,7 +121,7 @@ class Allpost extends Component {
 
                 {posts.length ? (
                     <button
-                        className="btn btn-raised btn-success mt-5 mb-5"
+                        className="btn btn-raised btn-primary mt-5 mb-5"
                         onClick={() => this.loadMore(1)}
                     >
                         Next ({page + 1})
