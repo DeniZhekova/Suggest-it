@@ -116,7 +116,7 @@ class SinglePost extends Component {
                         {likes} Signature
                     </h3>
                 )}
-
+                <i>You give support to a suggestion by pressing the like icon.Note that you can sign up once per user for a suggestion!</i>
                 <hr />
                 <div className='container' dangerouslySetInnerHTML={{ __html: post.body}}></div>
                 <br />

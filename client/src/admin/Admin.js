@@ -23,7 +23,7 @@ class Admin extends Component {
             <div>
                 <div className="jumbotron">
                     <h2 className="admin-dashboard">Admin Dashboard</h2>
-                    <p className="lead">Welcome to the Admin Dashboard of Suggest-it</p>
+                    <p className="welcome">Welcome to the Admin Dashboard of Suggest-it</p>
                     <p className="descr">This page can only be accessed by administrators.</p>
                 </div>
                 <div className="container-fluid">

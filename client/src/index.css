@@ -66,8 +66,10 @@ code {
   text-align: center;
 }
 
-.lead{
+.welcome{
   text-align: center;
+  font-size: 18px;
+  font-family:"Droid Sans";
 }
 
 .descr{
