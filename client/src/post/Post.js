@@ -76,7 +76,7 @@ class Post extends Component {
         return (
             <div className='container' style={{marginTop:'1vh',padding:'5vw'}} >
                 <div className="card cloudy-knoxville-gradient">
-                    <h5 className="card-header info-color white-text text-center py-4">
+                    <h5 className="card-header blue-gradient white-text text-center py-4">
                         <strong>Create Suggestion</strong>
                     </h5>
                     <div className="card-body px-lg-5 pt-0">
