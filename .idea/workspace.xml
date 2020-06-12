@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91592c46-2867-4579-9ea8-20c5f5470a6b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/model/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.js" afterDir="false" />
-    </list>
+    <list default="true" id="91592c46-2867-4579-9ea8-20c5f5470a6b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
