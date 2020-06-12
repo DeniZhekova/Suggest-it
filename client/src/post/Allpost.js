@@ -18,11 +18,11 @@ class Allpost extends Component {
         list().then(data =>{
             const posts = data.post.sort((a, b) => (a.likes.length < b.likes.length) ? 1 : ((b.likes.length < a.likes.length) ? -1 : 0));
             console.log(posts);
-            posts.forEach( post => {
-                if(isAuthenticated().user.role === "user" && post.show === false) {
+           /*posts.forEach( post => {
+                if(auth.role === "user" && post.show === false) {
                     posts.pop();
                 }
-            })
+            })*/
             this.setState({posts:posts,loading:false})
         }).catch(err => console.log(err.response))
     }

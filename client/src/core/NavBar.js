@@ -23,10 +23,10 @@ const Navbar = ({history}) => {
                             <NavLink exact to='/users' className="nav-link" activeClassName="line">Users <span className="sr-only">(current)</span></NavLink>
                         </li>
                         {isAuthenticated() ===false ? (
-                            <li className="nav-item ml-2">
+                            <li className="nav-item ml-2" style={{marginTop:'5px'}}>
                                     <div className="ui buttons">
                                         <NavLink to="/login"><button className="ui button">Login</button></NavLink>
-                                        <div className="or" data-text="or"></div>
+
                                         <NavLink to="/signup"><button className="ui positive button">Register</button></NavLink>
                                     </div>
                             </li>
