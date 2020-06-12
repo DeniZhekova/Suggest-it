@@ -24,7 +24,7 @@ class User extends Component {
                         <div key={i} className='card testimonial-card'>
                             <div className="card-up indigo lighten-1"></div>
                             <div className="avatar mx-auto white">
-                                <img alt='avatar' src={user._id ? `/api/user/photo/${user._id}`:Default} className="rounded-circle"/>
+                                <img alt='avatar' src={user._id ? `/api/user/photo/${user._id}`:Default } className="rounded-circle"/>
                             </div>
                             <div className="card-body">
                                 <h4 className="card-title">{user.name}</h4>

@@ -26,6 +26,10 @@ const postSchema = new mongoose.Schema({
         type:Date,
         default:Date.now
     },
+    show:{
+        type:Boolean,
+        default:true
+    },
     likes: [{ type: ObjectId, ref: 'User' }],
     updated: Date,
     comments: [

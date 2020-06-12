@@ -15,11 +15,11 @@ class SinglePost extends Component {
         show: true
     }
 
-    ShowHidePost = () => {
-        if (this.state.show == true) {
-            this.setState({ show: false });
+    hidePost = post => {
+        if (post.show === true) {
+            post.show = false;
         } else {
-            this.setState({ show: true });
+            ;
         }
     };
 
@@ -81,6 +81,7 @@ class SinglePost extends Component {
         const posterId = post.postedBy ? `/user/${post.postedBy._id}` : '';
         const posterName = post.postedBy ? post.postedBy.name : ' Unknown';
         const { like, likes } = this.state;
+
         return (
             <div className="card-body mb-5">
                 <Link to={`/`} className="btn btn-raised btn-link btn-md">
@@ -155,7 +156,7 @@ class SinglePost extends Component {
                                 >
                                     Delete Suggestion
                                 </button>
-                                <button onClick={this.hidePost} className="btn btn-raised btn-primary">
+                                <button onClick={this.hidePost(post)} className="btn btn-raised btn-primary">
                                     Hide Suggestion
                                 </button>
                             </div>

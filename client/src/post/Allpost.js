@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {list,pageList} from './apiPost';
 import {Link} from 'react-router-dom';
 import Logo from '../core/Logo.png';
+import {isAuthenticated} from "../auth";
 class Allpost extends Component {
     constructor(){
         super();
@@ -16,6 +17,12 @@ class Allpost extends Component {
         this.loadPosts(this.state.page);
         list().then(data =>{
             const posts = data.post.sort((a, b) => (a.likes.length < b.likes.length) ? 1 : ((b.likes.length < a.likes.length) ? -1 : 0));
+            console.log(posts);
+            posts.forEach( post => {
+                if(isAuthenticated().user.role === "user" && post.show === false) {
+                    posts.pop();
+                }
+            })
             this.setState({posts:posts,loading:false})
         }).catch(err => console.log(err.response))
     }
