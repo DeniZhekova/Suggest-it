@@ -57,7 +57,7 @@ const Router = () => (
     padding: "2rem"
     }}
 >
-    Suggest-it 2020 Exam
+    Suggest-it 2020 Exam © Denitsa Stoycheva Zhekova
 </StickyFooter>
   </div>
 );
