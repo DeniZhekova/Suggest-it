@@ -48,6 +48,21 @@ code {
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 }
+
+.hometitle{
+  text-align: center;
+}
+.admin-dashboard{
+  text-align: center;
+}
+
+.lead{
+  text-align: center;
+}
+
+.descr{
+  text-align: center;
+}
 @-webkit-keyframes Gradient {
   0% {
       background-position: 0% 50%;
