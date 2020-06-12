@@ -29,13 +29,19 @@ code {
 .fof{
   display: table-cell;
   vertical-align: middle;
+  background-color: white;
 }
 
 .fof h1{
-  font-size: 50px;
+
+  font-size: 18vw;
   display: inline-block;
   padding-right: 12px;
   animation: type .5s alternate infinite;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes type{
