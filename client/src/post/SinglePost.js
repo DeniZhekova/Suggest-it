@@ -11,8 +11,18 @@ class SinglePost extends Component {
         redirectToSignin: false,
         like: false,
         likes: 0,
-        comments: []
+        comments: [] ,
+        show: true
     }
+
+    ShowHidePost = () => {
+        if (this.state.show == true) {
+            this.setState({ show: false });
+        } else {
+            this.setState({ show: true });
+        }
+    };
+
     checkLike = likes => {
         const userId = isAuthenticated() && isAuthenticated().user._id;
         let match = likes.indexOf(userId) !== -1;

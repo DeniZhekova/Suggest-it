@@ -4,39 +4,18 @@ import { Redirect, Link } from "react-router-dom";
 import { read } from "./apiUser";
 import Default from "./Default.png";
 import DeleteUser from "./DeleteUser";
-import FollowProfileButton from "./FollowProfileButton";
 import ProfileTabs from './ProfileTabs';
 import {listByUser} from '../post/apiPost';
 class Profile extends Component {
   constructor() {
     super();
     this.state = {
-      user: { following: [], followers: [] },
+      user: { },
       redirectToSignin: false,
-      following: false,
       error: "",
       posts: []
     };
   }
-  // check follow
-  checkFollow = user => {
-    const jwt = isAuthenticated();
-    const match = user.followers.find(follower => {
-      // one id has many other ids (followers) and vice versa
-      return follower._id === jwt.user._id;
-    });
-    return match;
-  };
-
-  clickFollowButton = callApi => {
-    const userId = isAuthenticated().user._id;
-    const token = isAuthenticated().token;
-
-    callApi(userId, token, this.state.user._id).then(data => {
-      console.log(data)
-      this.setState({ user: data, following: !this.state.following });
-    }).catch(err => this.setState({error:err.response}));
-  };
 
   init = userId => {
     const token = isAuthenticated().token;
@@ -47,8 +26,8 @@ class Profile extends Component {
         listByUser(userId,token).then(res =>{
           this.setState({posts:res})
         })
-        let following = this.checkFollow(data.data);
-        this.setState({ user: data.data, following });
+
+        this.setState({ user: data.data });
       }
     });
   };
@@ -112,10 +91,10 @@ class Profile extends Component {
                     <DeleteUser userId={user._id} />
                   </div>
               ) : (
-                  <FollowProfileButton
-                      following={this.state.following}
-                      onButtonClick={this.clickFollowButton}
-                  />
+
+                  <div>
+                    <br />
+                    <p>If you like my profile, please sign up my suggestions</p></div>
               )}
             </div>
             <hr />
@@ -127,8 +106,6 @@ class Profile extends Component {
               <hr />
               <ProfileTabs
                   posts={posts}
-                  followers={this.state.user.followers}
-                  following={this.state.user.following}
               />
             </div>
           </div>
